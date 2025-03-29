@@ -20,7 +20,7 @@ const useBaseStore = create((set) => ({
         date: "2021-2023",
         link: "https://immerwebds.github.io/",
         image: "/research_1_teaser.jpg",
-        status: "only arXiv version"
+        status: "under review"
       },
       {
         title: "Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts",
