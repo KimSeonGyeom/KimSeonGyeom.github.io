@@ -18,6 +18,7 @@ function Header() {
           <div className="profile-contact">
             {/* <p><a href={profile.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a></p>
             <p> / </p> */}
+            <p><a href="/resume_gyeom.pdf" target="_blank" rel="noopener noreferrer">CV</a></p> /
             <p><strong>Email:</strong> {profile.contact.email}</p>
           </div>
         </div>

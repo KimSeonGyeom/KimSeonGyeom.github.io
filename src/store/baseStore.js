@@ -42,12 +42,12 @@ const useBaseStore = create((set) => ({
     education: [
       {
         title: "Ph.D. in Industrial Design (Integrated M.S./Ph.D. Track)",
-        organization: "KAIST",
+        organization: "KAIST (Korea Advanced Institute of Science and Technology)",
         date: "Aug 2021 - Present",
       },
       {
         title: "B.S. in Industrial Design",
-        organization: "KAIST",
+        organization: "KAIST (Korea Advanced Institute of Science and Technology)",
         date: "Mar 2015 - Aug 2021",
       }
     ]
