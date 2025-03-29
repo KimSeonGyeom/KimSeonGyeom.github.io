@@ -90,16 +90,34 @@ body {
 .content-wrapper {
   width: 100%;
   display: flex;
+  gap: 2rem;
+  flex-direction: column;
   justify-content: center;
   padding: 0;
+}
+
+/* Shared component content wrappers */
+.interests-content,
+.research-content,
+.timeline-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common section elements */
+.section-paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.section-divider {
+  margin-top: 2rem;
 }
 
 /* Header */
 .header {
   background-color: white;
   padding: 1rem 0 0 0; /* Reduced padding */
-  border-radius: 0;
-  border: none;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -124,7 +142,7 @@ body {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   margin-right: 1.5rem;
 }
 
@@ -165,7 +183,7 @@ body {
   text-align: left;
   margin-bottom: 0.75rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.2rem;
 }
 
@@ -181,109 +199,95 @@ body {
 /* Navigation */
 .navigation ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
-  gap: 0.5rem;
-  justify-content: center;
-  border-bottom: 1px solid var(--divider-color);
-  padding: 0 0 0.75rem 0;
-  margin-bottom: 0.75rem;
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 0;
   position: relative;
+  border-bottom: none;
 }
 
 .navigation li {
-  flex: 0 0 auto;
-  min-width: 100px;
+  width: 100%;
   position: relative;
 }
 
 .navigation button {
   background: none;
-  border: none;
   cursor: pointer;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.5rem;
-  border-radius: 0;
+  font-size: 1.75rem;
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
   width: 100%;
-  text-align: center;
-  color: var(--text-color);
+  text-align: left;
+  color: var(--primary-color);
   position: relative;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 0;
+  font-weight: 700;
 }
 
 .navigation button::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background-color: var(--primary-color);
-  transition: width 0.3s ease;
-  z-index: 1;
+  display: none;
 }
 
 .navigation button:hover {
-  color: var(--primary-color);
-}
-
-.navigation button:hover::after {
-  width: 100%;
+  background: none;
+  color: var(--secondary-color);
 }
 
 .navigation button.active {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 700;
+  background: none;
 }
 
 .navigation button.active::after {
-  width: 100%;
+  display: none;
 }
 
 /* Content sections */
 .content {
   background-color: white;
-  padding: 1rem 0;
-  border-radius: 0;
-  border: none;
+  padding: 0;
   width: 100%;
   max-width: 850px;
-  transition: opacity var(--transition-speed) ease;
-  overflow-y: auto;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: var(--content-min-height);
-  margin-bottom: 1.5rem;
+  min-height: auto;
+  margin-bottom: 2rem;
 }
 
 section {
-  min-height: calc(var(--content-min-height) - 2rem);
+  display: block;
   width: 100%;
-  animation: fadeIn var(--transition-speed) ease-in-out;
-  text-align: left;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-top: 0;
+  min-height: auto;
+  border-bottom: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+section:last-child {
+  border-bottom: none;
 }
 
-/* Common section styles */
+section img {
+  width: 80%;
+  align-self: center;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Section headings */
 section h3 {
   color: var(--primary-color);
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
+  font-size: 1.3rem;
+  /* margin-bottom: 1rem;
+  padding-bottom: 0.5rem; */
+  /* border-bottom: 1px solid var(--border-color); */
+  display: block;
 }
 
 /* About section */
@@ -316,7 +320,6 @@ section h3 {
 
 .education-item {
   border-bottom: 1px solid var(--border-color);
-  border-radius: 0;
   padding: 0.75rem 0;
   transition: border-color 0.3s ease;
   display: flex;
@@ -339,18 +342,6 @@ section h3 {
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   margin-bottom: 0.3rem;
-  border: none;
-}
-
-/* Research Interests */
-.interests-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1.25rem;
 }
 
 .interest-item {
@@ -380,7 +371,6 @@ section h3 {
 
 .research-project {
   border-bottom: 1px solid var(--border-color);
-  border-radius: 0;
   padding: 1rem 0;
   transition: transform 0.3s ease;
   display: flex;
@@ -391,26 +381,10 @@ section h3 {
   border-bottom: none;
 }
 
-.research-project:hover {
-  transform: translateY(-5px);
-  border-color: var(--secondary-color);
-}
-
 .research-project h3 {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
   color: var(--primary-color);
-}
-
-.research-project .date {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.85rem;
-  background-color: var(--accent-bg-color);
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  margin-bottom: 0.3rem;
-  border: none;
 }
 
 .project-link {
@@ -496,7 +470,6 @@ section h3 {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   margin-bottom: 0.5rem;
-  border: none;
 }
 
 /* Footer */
@@ -527,6 +500,7 @@ footer {
   .profile-image {
     width: 160px;
     height: 160px;
+    align-self: center;
     margin-right: 0;
     margin-bottom: 1rem;
   }
@@ -536,7 +510,7 @@ footer {
   }
   
   .profile-about, .profile-contact {
-    text-align: center;
+    text-align: left;
     max-width: 100%;
     margin-bottom: 0.75rem;
   }
@@ -545,10 +519,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 0.75rem;
-  }
-  
-  .interests-list {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -582,7 +552,7 @@ p {
 /* Research project adjustments */
 .research-project h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0rem;
 }
 
 /* Make the date indicators more compact */
@@ -592,13 +562,32 @@ p {
   font-size: 0.85rem;
 }
 
-/* Reduce research interests grid spacing */
-.interests-list {
-  gap: 0.5rem;
-}
-
 /* Prevent scrollbar layout shifts */
 html {
   overflow-y: scroll;
   scrollbar-width: thin;
+}
+
+.research-publications {
+  margin-top: 2rem;
+}
+
+.publication-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.publication-item {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.publication-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
 }

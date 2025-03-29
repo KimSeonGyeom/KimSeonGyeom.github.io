@@ -9,42 +9,46 @@ const useBaseStore = create((set) => ({
     name: "Seon Gyeom Kim",
     title: "Ph.D. Candidate",
     profileImage: "/seongyeomkim.jpg",
-    about: "I am a researcher at KAIST focusing on artificial intelligence and machine learning. My research aims to develop advanced algorithms for solving complex problems in computer vision and natural language processing. With a background in computer science and mathematics, I strive to bridge the gap between theoretical foundations and practical applications in the field of AI.",
     contact: {
       email: "ksg_0320@kaist.ac.kr",
+      github: "https://github.com/KimSeonGyeom",
     },
-    researchInterests: [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Computer Vision",
-      "Natural Language Processing"
-    ],
     research: [
       {
-        title: "Research Project 1",
+        title: "Understanding the Impact of Spatial Immersion in Web Data Stories",
         description: "Description of research project 1",
-        date: "2023-Present",
-        link: "#"
+        date: "2021-2023",
+        link: "https://immerwebds.github.io/",
+        image: "/research_1_teaser.jpg",
+        status: "only arXiv version"
       },
       {
-        title: "Research Project 2",
+        title: "Chart-to-Experience: Benchmarking Multimodal LLMs for Predicting Experiential Impact of Charts",
         description: "Description of research project 2",
-        date: "2022-2023",
-        link: "#"
+        date: "2023-2024",
+        link: "https://chart2experience.github.io/",
+        image: "/research_2_teaser.png",
+        status: "Accepted to PacificVis 2025"
+      },
+      {
+        title: "AI-Infused Pipeline for Authoring Semantically Stylized Charts",
+        description: "Description of research project 3",
+        date: "2024-Present",
+        link: "#",
+        image: "/research_3_teaser.png",
+        status: "WIP"
       }
     ],
-    timeline: [
+    education: [
       {
-        title: "Current Position",
+        title: "Ph.D. in Industrial Design (Integrated M.S./Ph.D. Track)",
         organization: "KAIST",
-        description: "Research in AI",
-        period: "2023-Present"
+        date: "Aug 2021 - Present",
       },
       {
-        title: "Previous Position",
-        organization: "University",
-        description: "Bachelor's Degree",
-        period: "2019-2023"
+        title: "B.S. in Industrial Design",
+        organization: "KAIST",
+        date: "Mar 2015 - Aug 2021",
       }
     ]
   },
