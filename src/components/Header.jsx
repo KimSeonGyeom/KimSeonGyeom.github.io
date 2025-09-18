@@ -11,7 +11,7 @@ function Header() {
           <h1>{profile.name}</h1>
           <h2>{profile.title}</h2>
           <p className="profile-about">
-            I am a Ph.D. candidate at <a href="https://reflect9.github.io/ael/" target="_blank" rel="noopener noreferrer">AEL, KAIST</a>, under the supervision of <a href="https://takyeonlee.com/" target="_blank" rel="noopener noreferrer">Prof. Tak Yeon Lee</a>.
+            I am a Ph.D. candidate at <a href="https://ai-experience-lab.github.io/" target="_blank" rel="noopener noreferrer">AEL, KAIST</a>, under the supervision of <a href="https://takyeonlee.com/" target="_blank" rel="noopener noreferrer">Prof. Tak Yeon Lee</a>.
             <br/>My research focuses on <strong>Understanding and Facilitating Experiential Impacts of Visual Features</strong>.
             Currently, I am interested in <strong>Embellished Chart</strong>, which utilizes design patterns like <strong>3D</strong>, <strong>Animated Transition</strong>, and <strong>Semantic Illustration</strong> for particular communicative purposes.
           </p>
