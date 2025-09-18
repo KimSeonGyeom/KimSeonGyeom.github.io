@@ -28,15 +28,15 @@ const useBaseStore = create((set) => ({
         date: "2023-2024",
         link: "https://chart2experience.github.io/",
         image: "/research_2_teaser.png",
-        status: "Accepted to PacificVis 2025"
+        status: "Accepted to PacificVis 2025 (Short Paper, Best Paper)"
       },
       {
-        title: "AI-Infused Pipeline for Authoring Semantically Stylized Charts",
+        title: "Grounded Generation of Embellished Bar Chart ensuring Chart Integrity",
         description: "Description of research project 3",
-        date: "2024-Present",
-        link: "#",
+        date: "2024-2025",
+        link: "https://groundedchartgeneration.github.io/",
         image: "/research_3_teaser.png",
-        status: "WIP"
+        status: "Accepted to IEEE VIS 2025 (Short Paper)"
       }
     ],
     education: [
